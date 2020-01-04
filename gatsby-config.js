@@ -14,11 +14,17 @@ const getAboutEntry = entry => entry.sys.contentType.sys.id === 'about';
 const plugins = [
   'gatsby-plugin-react-helmet',
   {
-    resolve: 'gatsby-plugin-web-font-loader',
+    resolve: 'gatsby-plugin-prefetch-google-fonts',
     options: {
-      google: {
-        families: ['Cabin', 'Open Sans'],
-      },
+      fonts: [
+        {
+          family: `Amatic SC`,
+        },
+        {
+          family: `Open Sans`,
+          variants: [`400`, `700`],
+        },
+      ],
     },
   },
   {
